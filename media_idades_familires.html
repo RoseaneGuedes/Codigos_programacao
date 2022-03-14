@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+//primeiro começa da pergunta que o usuario vai responde e essa pergunta precisa ser repetida a quantidade de familiares que a pessoa tenha
+//Por isso temos que criar a variável numero pra poder ter a repetição
+//A variável totalIdades é para que possa ir somando cada idade informada e precisa estar fora do while para não ser zerada a cada iteração
+//Lembrando que numero++ é um atalho para numero=numero+1
+
+	var totalFamiliares=parseInt(prompt("Qual a quantidade de familiares tem na sua família? "));
+
+	var numero=1;
+
+	var totalIdades=0;
+
+	while(numero<=totalFamiliares) {
+		var idade=parseInt(prompt(" Informe a idade do familiar"));
+		totalIdades=totalIdades+idade;
+		numero++
+	}
+// Só falta calcular e mostrar a média
+
+var mediaDasIdades=totalIdades/totalFamiliares;
+
+mostra("A média das idades dos familiares é " + mediaDasIdades);
+mostra("FIM");
+	</script>
